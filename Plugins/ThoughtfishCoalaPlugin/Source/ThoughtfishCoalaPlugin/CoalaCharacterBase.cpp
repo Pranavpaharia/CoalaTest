@@ -151,11 +151,11 @@ void ACoalaCharacterBase::Tick(float DeltaTime)
 		//CursorToWorld->SetWorldLocation(TraceHitResult.Location);
 		//CursorToWorld->SetWorldRotation(CursorR);
 
-		if (PC->IsInputKeyDown(EKeys::E) == true)
+		if (PC->IsInputKeyDown(EKeys::O) == true)
 		{
 			OnRotateCamera(-1);
 		}
-		else if (PC->IsInputKeyDown(EKeys::Q) == true)
+		else if (PC->IsInputKeyDown(EKeys::I) == true)
 		{
 			OnRotateCamera(1);
 		}

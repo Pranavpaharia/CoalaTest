@@ -9,6 +9,18 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams( FOnWorldPositionChanged, float, lon, float, lat );
 
+UENUM(BlueprintType)
+enum class EPlayerDirEnum : uint8
+{
+	PD_North UMETA(DisplayName = "Player North"),
+	PD_East UMETA(DisplayName = "Player East"),
+	PD_South UMETA(DisplayName = "Player South"),
+	PD_West UMETA(DisplayName = "Player West")
+};
+
+
+
+
 UCLASS()
 class ACoalaCharacterBase : public ACharacter
 {
@@ -26,6 +38,8 @@ public:
 	void DisableInput( class APlayerController* playercontroller) override;
 	void EnableInput( class APlayerController* playercontroller) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PlayerDir)
+	EPlayerDirEnum PlayerDirEnum;
 	//CoalaCharacter
 	/** Returns TopDownCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }

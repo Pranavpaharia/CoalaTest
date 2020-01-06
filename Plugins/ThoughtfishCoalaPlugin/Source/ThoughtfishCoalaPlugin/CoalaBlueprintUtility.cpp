@@ -198,6 +198,20 @@ UCoalaBlueprintUtility::LoadCoalaAreaFromResponse(FString JsonRaw, int defaultBu
 	UCoalaArea* ret = CoalaConverter::JsonToCoalaArea(JsonRaw, defaultBuildingLevel, clampToDefaultBuildingLevel, limitMaxBuildingLevelTo );
 	return ret;
 }
+
+
+FCoalaRemoteTileRequest
+UCoalaBlueprintUtility::CreateRemoteTileRequestFromTileID(uint8 zoom, int tile_x, int tile_y)
+{
+	
+	FCoalaRemoteTileRequest tile;
+	tile.tile_x = tile_x;
+	tile.tile_y = tile_y;
+	tile.zoom = zoom;
+	return tile;
+}
+
+
 FCoalaRemoteTileRequest
 UCoalaBlueprintUtility::CreateRemoteTileRequestFromGpsCoordinates(uint8 zoom, float lon, float lat)
 {

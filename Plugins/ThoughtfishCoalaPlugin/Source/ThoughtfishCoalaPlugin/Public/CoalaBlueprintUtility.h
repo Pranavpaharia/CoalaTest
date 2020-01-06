@@ -58,6 +58,10 @@ class THOUGHTFISHCOALAPLUGIN_API UCoalaBlueprintUtility
 		return area;
 	}
 
+	UFUNCTION(BlueprintPure, Category = "Coala|Utility")
+	static FCoalaRemoteTileRequest CreateRemoteTileRequestFromTileID(uint8 zoom, int tile_x, int time_y);
+
+
 	UFUNCTION(BlueprintPure, Category="Coala|Utility")
 	static FCoalaRemoteTileRequest CreateRemoteTileRequestFromIndex( uint8 zoom, int tile_x, int tile_y )
 	{ return FCoalaRemoteTileRequest(); }
