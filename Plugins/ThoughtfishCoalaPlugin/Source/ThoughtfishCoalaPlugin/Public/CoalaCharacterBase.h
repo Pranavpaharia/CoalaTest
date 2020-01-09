@@ -22,7 +22,7 @@ enum class EPlayerDirEnum : uint8
 
 
 UCLASS()
-class ACoalaCharacterBase : public ACharacter
+class THOUGHTFISHCOALAPLUGIN_API ACoalaCharacterBase : public ACharacter
 {
 	GENERATED_BODY()
 

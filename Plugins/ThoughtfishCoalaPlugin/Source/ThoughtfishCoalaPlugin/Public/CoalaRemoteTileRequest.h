@@ -12,8 +12,8 @@
  * 
  */
 
-USTRUCT(BlueprintType, meta=(HiddenByDefault))
-struct FCoalaRemoteTileRequest
+USTRUCT(BlueprintType)
+struct THOUGHTFISHCOALAPLUGIN_API FCoalaRemoteTileRequest
 {
 	GENERATED_BODY()
 	
